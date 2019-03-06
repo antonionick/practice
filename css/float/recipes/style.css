@@ -1,0 +1,54 @@
+.recipe .title {
+	color: #00e600;
+}
+
+.recipe .list {
+	list-style: none;
+	padding: 0;
+}
+
+.recipe .list:after ,.recipe .list li:after {
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
+}
+
+.recipe .list li:before {
+	content: "★";
+	color: brown;
+	line-height: 28px;
+	padding-right: 5px;
+	float: left;
+	width: 20px;
+}
+
+.recipe .list li {
+	margin-top: 5px;
+}
+
+.recipe .list .link{
+	width: 200px;
+	display: block;
+	color: #bf5b55;
+	line-height: 28px;
+	text-decoration: none;
+}
+
+.recipe .list .link > div {
+	box-sizing: border-box;
+}
+
+.recipe .list .link > .name {
+	font-size: 18px;
+	float: left;
+	width: 70%;
+}
+
+.recipe .list .link > .page {
+	float: right;
+	text-align: center;
+	width: 15%;
+	background: #e8e8e8;
+	border-radius: 50%;
+}
