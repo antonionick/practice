@@ -1,0 +1,47 @@
+.deliveryAddress {
+	margin: 10px 40px;
+	box-sizing: border-box;
+}
+
+.deliveryAddress > form {
+	overflow: hidden;
+	width: 40%;
+	padding: 10px;
+}
+
+.deliveryAddress > form input {
+	display: block;
+	max-width: 250px;
+	width: 50%;
+	padding: 4px;
+	background: rgb(235, 232, 223);
+	border: 1px solid rgb(215, 212, 203);
+	border-radius: 4px;
+	height: 20px;
+	margin-bottom: 10px;
+}
+
+.deliveryAddress > form input:focus {
+	outline: none;
+}
+
+.deliveryAddress > form input[type="submit"] {
+	margin-left: 90px;
+	width: 30%;
+	height: auto;
+	padding: 6px;
+	background: RGB(184,143,63);
+	color: white;
+	border: 5px solid rgb(215, 212, 203);
+	border-radius: 20px;
+	cursor: pointer;
+}
+
+.deliveryAddress > form label {
+	float: left;
+	width: 80px;
+	text-align: right;
+	margin-right: 10px;
+	cursor: pointer;
+	line-height: 30px;
+}
