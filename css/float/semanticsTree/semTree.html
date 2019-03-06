@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>semantics tree</title>
+	<link rel="stylesheet" href="semTree.css">
+</head>
+<body>
+
+<ul class="list">
+	<li class="open">
+		<div class="icon"><img src="https://js.cx/sprite-tree/minus.gif" width="16" height="16"></div>
+		<div class="text">Раздел 1
+			<p>(занимает две строки)</p>
+		</div>
+		<ul>
+			<li class="closed">
+				<div class="icon"><img src="https://js.cx/sprite-tree/plus.gif" width="16" height="16"></div>
+				<div class="text">Раздел 1.1</div>
+			</li>
+			<li class="leaf">
+				<div class="icon article"><img src="https://js.cx/sprite-tree/article.gif" width="16" height="16"></div>
+				<div class="text">Страница 1.2
+					<p>(занимает две строки)</p>
+				</div>
+			</li>
+		</ul>
+	</li>
+	<li class="closed">
+		<div class="icon"><img src="https://js.cx/sprite-tree/plus.gif" width="16" height="16"></div>
+		<div class="text">Раздел 2
+			<p>(занимает две строки)</p>
+		</div>
+	</li>
+</ul>
+
+<script src="semTree.js"></script>
+</body>
+</html>

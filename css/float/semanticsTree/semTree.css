@@ -1,0 +1,29 @@
+ul {
+	margin: 0;
+	list-style: none;
+}
+
+ul.list {
+	padding: 0;
+}
+
+ul li .text p {
+	margin: 4px 0;
+}
+
+ul li > .icon {
+	margin-right: 5px;
+	float: left;
+}
+
+ul li > .icon:hover {
+	cursor: pointer;
+}
+
+ul li > .icon.article:hover {
+	cursor: text;
+}
+
+ul li .text {
+	margin-bottom: 5px;
+}
