@@ -1,0 +1,53 @@
+.footNumb {
+	margin-top: 10px;
+}
+
+.footNumb:after {
+	content: "";
+	display: block;
+	clear: both;
+	height: 0;
+}
+
+.footNumb > div {
+	box-sizing: border-box;
+}
+.left {
+	float: left;
+	max-width: 30%;
+}
+
+.right {
+	float: right;
+	max-width: 70%;
+}
+
+.right ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.right ul li {
+	float: left;
+}
+
+.right ul li a {
+	text-decoration: none;
+	display: block;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border: 1px solid #c7c7c7;
+	background: lightgrey;
+	margin-right: 5px;
+	color: white;
+	transition: background-color 1s, border 1s;
+}
+
+.right ul li a:hover {
+	background: #bf5b55;
+	border: 1px solid #a54f4f;
+	transition: background-color 1s, border 1s;
+}
