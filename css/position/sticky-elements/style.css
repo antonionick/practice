@@ -1,0 +1,54 @@
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background: #cd1c99;
+}
+
+header > ul {
+	list-style: none;
+	text-align: center;
+}
+
+header > ul > li {
+	display: inline-block;
+	margin: 10px;
+
+}
+
+ul > li a {
+	text-decoration: none;
+	color: white;
+}
+
+.soc-net {
+	position: sticky;
+	top: 58px;
+	left: 10px;
+	float: left;
+}
+
+.soc-net a {
+	display: block;
+	width: 64px;
+	height: 64px;
+	margin-bottom: 5px;
+}
+
+main {
+	margin: 20px auto;
+	padding: 15px;
+	width: 60%;
+	min-height: 2000px;
+	background: #ffffff;
+	box-shadow: 0 0 8px 2px #e1e1e1;
+}
+
+main p {
+	margin: 10px 0;
+	font-size: 18px;
+}

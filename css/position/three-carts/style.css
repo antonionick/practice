@@ -1,0 +1,48 @@
+body {
+	margin: 0;
+}
+
+.cart {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.cart.first {
+	left: -42px;
+	top: 10px;
+	transform: rotate(-10deg);
+}
+
+.cart.third {
+	left: 58px;
+	top: 6px;
+	transform: rotate(15deg);
+}
+
+.not-page {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	display: none;
+	background: rgba(45, 45, 45, 0.86);
+}
+
+.content {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 160px;
+	height: 100px;
+	margin: auto;
+	color: white;
+	font-size: 100px;
+	letter-spacing: 5px;
+}
