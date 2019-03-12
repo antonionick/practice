@@ -1,0 +1,48 @@
+.page-nav {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.pages {
+	text-align: center;
+	padding: 0;
+}
+
+.pages li{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0 5px;
+	vertical-align: middle;
+	border: 1px solid black;
+	border-radius: 50px;
+	transition: all 0.6s;
+}
+
+.pages li.previous,
+.pages li.next {
+	width: 80px;
+}
+
+.pages li a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-decoration: none;
+	color: black;
+	line-height: 30px;
+}
+
+.pages li.now,
+.pages li:hover {
+	background: #ff8203;
+	border: 1px solid #ff8203;
+	transition: all 0.6s;
+}
+
+.pages li.now a,
+.pages li a:hover{
+	color: white;
+	transition: color 0.6s;
+}
+
