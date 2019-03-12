@@ -1,0 +1,38 @@
+.content {
+	margin: 20px;
+	padding: 10px;
+	background: #ebebeb;
+	width: 500px;
+	box-sizing: border-box;
+}
+
+.content > div {
+	display: inline-block;
+	width: 65%;
+}
+
+.content > div.img {
+	text-align: right;
+	padding: 0 10px 0 0;
+	border-right: 2px solid brown;
+}
+
+.content > div.img p {
+	margin: 6px 0;
+}
+
+.content > div.img img {
+	width: 90%;
+	max-width: 300px;
+}
+
+.content > div.text {
+	width: 28%;
+	vertical-align: top;
+	padding-left: 10px;
+}
+
+.content > div.text h2 {
+	font-weight: 500;
+	margin: 0;
+}
