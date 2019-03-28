@@ -1,0 +1,28 @@
+.container {
+	width: 600px;
+	margin: 20px auto;
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	background: #f0f0f0;
+	border-radius: 10px;
+	box-shadow: 0 0 4px grey;
+}
+
+.thumbnail {
+	position: relative;
+	height: 300px;
+	width: 500px;
+	margin: 0 auto 5px;
+	overflow: hidden;
+}
+
+.thumbnail img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: auto;
+	height: 100%;
+	margin: 0 auto;
+}
