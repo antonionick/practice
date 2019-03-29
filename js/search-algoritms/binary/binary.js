@@ -1,4 +1,4 @@
-// /search-algoritms/binary/binary.js
+// node js/search-algoritms/binary/binary.js
 
 class Binary {
 	constructor() {
@@ -6,7 +6,7 @@ class Binary {
 	}
 
 	search(item) {
-		return this._binarySearch(item, 0, this._array.length);
+		return this._binarySearch(item, 0, this._array.length - 1);
 	}
 
 	_binarySearch(item, min, max) {
