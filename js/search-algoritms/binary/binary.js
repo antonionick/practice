@@ -10,12 +10,16 @@ class Binary {
 	}
 
 	_binarySearch(item, min, max) {
+		// compute middle element
 		const middle = Math.floor((max - min) / 2) + min;
 
+		// if min + 1 equal max, arr doesn't have searching element
 		if (min + 1 >= max) {
 			return null;
 		}
 
+		// if middle element more then searching element, we need a smaller middle element
+		// if middle element less then searching element, we need a bigger middle element
 		if (this._array[middle] > item) {
 			return this._binarySearch(item, min, middle);
 		} else if (this._array[middle] < item) {
