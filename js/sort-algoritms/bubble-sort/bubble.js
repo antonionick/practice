@@ -1,4 +1,4 @@
-// node js/sort-algoritms/bubble/bubble.js
+// node js/sort-algoritms/bubble-sort/bubble.js
 
 class Bubble {
 	constructor() {
