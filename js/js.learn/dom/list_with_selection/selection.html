@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<style>
+		.selected {
+			background: #0f0;
+		}
+		
+		li {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+Клик на элементе выделяет только его.
+<br> Ctrl(Cmd)+Клик добавляет/убирает элемент из выделенных.
+<br> Shift+Клик добавляет промежуток от последнего кликнутого к выделению.
+<br>
+
+<ul class="list">
+	<li>Кристофер Робин</li>
+	<li>Винни-Пух</li>
+	<li>Ослик Иа</li>
+	<li>Мудрая Сова</li>
+	<li>Кролик. Просто кролик.</li>
+</ul>
+
+<script>
+	const list = document.querySelector(".list");
+
+	list.addEventListener("mousedown", e => {
+		if (e.shiftKey) {
+			e.preventDefault();
+		}
+	});
+
+	list.addEventListener("click", e => {
+		if (e.target.tagName !== "LI") return;
+
+		const last = e.currentTarget.querySelector(".last");
+
+		if (e.ctrlKey || e.metaKey) {
+			toggleElement(e.target);
+		} else if (e.shiftKey) {
+			addSomeElements(e, last);
+		} else {
+			removeAll(e);
+			toggleElement(e.target);
+		}
+
+		if (last) {
+			last.classList.remove("last");
+		}
+		e.target.classList.add("last");
+	});
+
+	function toggleElement(elem) {
+		elem.classList.toggle("selected");
+	}
+
+	function addSomeElements(e, last) {
+		const items = e.currentTarget.querySelectorAll("li");
+		let current_index = 0,
+			last_index = last ? 0 : items.length - 1;
+		for (let i = 0; i < items.length; i++) {
+			if (items[i] === e.target) current_index = i;
+			if (items[i] === last) last_index = i;
+		}
+
+		if (current_index - last_index > 0) {
+			const swap = current_index;
+			current_index = last_index;
+			last_index = swap;
+		}
+
+		for (let i = current_index; i <= last_index; i++) {
+			items[i].classList.add("selected");
+		}
+	}
+
+	function removeAll(e) {
+		const selected = e.currentTarget.querySelectorAll(".selected");
+		for (let i = 0; i < selected.length; i++) {
+			selected[i].classList.remove("selected");
+		}
+	}
+</script>
+
+</body>
+
+</html>
