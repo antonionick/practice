@@ -1,0 +1,92 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>JS animation</title>
+	<style>
+		#field {
+			height: 200px;
+			border-bottom: 3px black groove;
+			position: relative;
+		}
+		
+		#ball {
+			position: absolute;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+
+
+<div id="field">
+	<img src="https://js.cx/clipart/ball.svg" width="40" height="40" id="ball">
+</div>
+
+<script>
+	const ball = document.getElementById("ball");
+
+	function animation({draw, duration, timing}) {
+		const start = performance.now();
+
+		function callEvent(time) {
+			const timeFraction = (time - start) / duration;
+
+			if (timeFraction < 0) {
+				ball.style.top = 0 + "px";
+				ball.style.left = 0 + "px";
+				draw = draw();
+			}
+
+			const progress = 1 - timing(1 - timeFraction);
+			draw(progress);
+
+			if (timeFraction < 1) requestAnimationFrame(callEvent);
+		}
+
+		requestAnimationFrame(callEvent);
+	}
+
+	function draw() {
+		const start = parseInt(getComputedStyle(ball).top);
+
+		function offset(progress) {
+			ball.style.top = start + progress * 160 + "px";
+		}
+
+		return offset;
+	}
+
+	ball.onclick = function (e) {
+		animation({
+			draw, duration: 2000, timing: function (progress) {
+				for (let a = 0, b = 1; 1; a += b, b /= 2) {
+					if (progress >= (7 - 4 * a) / 11) {
+						return -Math.pow((11 - 6 * a - 11 * progress) / 4, 2) + Math.pow(b, 2)
+					}
+				}
+			}
+		});
+
+		animation({
+			draw() {
+				{
+					const start = parseInt(getComputedStyle(ball).left);
+
+					function offset(progress) {
+						ball.style.left = start + progress * 100 + "px";
+					}
+
+					return offset;
+				}
+			}, duration: 2000, timing: function (progress) {
+				return Math.pow(progress, 2);
+			}
+		});
+	}
+</script>
+</body>
+
+</html>
